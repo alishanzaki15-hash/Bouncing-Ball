@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #000000, #044683);
+  overflow: hidden;
+}
+.ball {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;   /* image size */
+  height: 100px;
+  object-fit: contain; /* keeps image ratio */
+  animation: moveX 5s linear infinite alternate,
+             moveY 2.5s ease-in-out infinite alternate;
+}
+
+/* Horizontal movement */
+@keyframes moveX {
+  30%   { right: 5; }
+  80% { right: calc(100vw - 80px); }
+}
+
+/* Vertical movement */
+@keyframes moveY {
+  30%   { top: 5; }
+  80% { top: calc(100vh - 95px); }
+}
